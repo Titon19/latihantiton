@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bg {
+        background-image: url("https://rakyatsulsel.fajar.co.id/wp-content/uploads/2024/04/Albert-Einstein-Ilmuwan-Fisika-Pencetus-Teori-Relativitas.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 120vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .transparan {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 120vh;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .judul {
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        align-content: center;
+        font-weight: 30px;
+        color: white;
+      }
+
+      .nav {
+        display: grid;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        color: white;
+        background-color: black;
+        grid-template-columns: repeat(2, 1fr);
+        background-attachment: fixed;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      ul {
+        font-style: none;
+        grid-column: 6;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      li {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        align-content: center;
+        text-align: center;
+      }
+
+      li:hover {
+        background-color: green;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .konten {
+        margin: 20px 50px;
+      }
+
+      .isiawal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 300px);
+        text-align: justify;
+        justify-content: center;
+      }
+
+      .satu {
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .dalem {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        grid-column: 2;
+        justify-items: center;
+      }
+
+      .dalem2 {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        grid-column: 1;
+        grid-row: 2;
+        justify-items: center;
+      }
+
+      .dalem3 {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        grid-column: 3;
+        grid-row: 2;
+        justify-items: center;
+      }
+
+      .portofolio {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 120px);
+        justify-items: center;
+        align-content: center;
+      }
+      .dua1 {
+        display: grid;
+        width: 200px;
+        height: 120px;
+        justify-items: center;
+        align-content: center;
+      }
+
+      .dua2 {
+        display: grid;
+        width: 200px;
+        height: 120px;
+        justify-items: center;
+        align-content: center;
+        grid-column: 2;
+      }
+      .dua3 {
+        display: grid;
+        width: 200px;
+        height: 120px;
+        justify-items: center;
+        align-content: center;
+        grid-column: 3;
+      }
+
+      .dua4 {
+        display: grid;
+        width: 200px;
+        height: 120px;
+        justify-items: center;
+        align-content: center;
+        grid-column: 4;
+      }
+      h2 {
+        text-align: center;
+        margin: 50px 0 50px 0;
+      }
+
+      .kontak {
+        display: grid;
+        grid-template-columns: repeat(1, 0.7fr);
+        grid-template-rows: repeat(1, 400px);
+      }
+
+      .tiga {
+        width: 50px;
+        height: 50px;
+      }
+
+      .info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        text-align: center;
+        align-items: center;
+
+        grid-column: 2;
+      }
+
+      .nomor,
+      .email,
+      .In {
+        display: grid;
+        grid-template-columns: 20% 80%;
+      }
+
+      .inputan {
+        /* display: grid;
+        grid-template-rows: repeat(5); */
+        justify-items: left;
+      }
+
+      input[type="text"] {
+        width: 80%;
+        height: 5%;
+      }
+
+      textarea[name="area"] {
+        width: 80%;
+        height: 50%;
+      }
+
+      button {
+        padding: 5px 20px;
+        background-color: green;
+        color: white;
+        width: 81%;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #333;
+      }
+
+      h2 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-decoration: underline;
+        font-weight: 40px;
+      }
+
+      .footer {
+        text-align: center;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 15px;
+        width: 100%px;
+        height: 50px;
+        align-content: center;
+        background-color: black;
+        color: white;
+      }
+
+      @media only screen and (max-width: 880px) {
+        .portofolio {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(1, 120px);
+        }
+
+        .dua3 {
+          grid-column: 1;
+          grid-row: 2;
+        }
+
+        .dua4 {
+          grid-column: 2;
+          grid-row: 2;
+        }
+      }
+
+      @media only screen and (max-width: 633px) {
+        .nav {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
+        ul {
+          display: grid;
+          font-style: none;
+          grid-column: unset;
+          justify-items: center;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        li {
+          display: inline-block;
+          width: 100px;
+          height: 50px;
+          align-content: center;
+          text-align: center;
+        }
+
+        .logo {
+          display: none;
+        }
+
+        .isiawal {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(3, 300px);
+        }
+        .dalem,
+        .dalem2,
+        .dalem3 {
+          display: grid;
+          grid-column: unset;
+        }
+
+        .dalem {
+          grid-row: 1;
+        }
+        .dalem2 {
+          grid-row: 2;
+        }
+        .dalem3 {
+          grid-row: 3;
+        }
+        .portofolio {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(4, 120px);
+        }
+        .dua1,
+        .dua2,
+        .dua3,
+        .dua4 {
+          grid-column: unset;
+        }
+
+        .dua1 {
+          grid-row: 1;
+        }
+
+        .dua2 {
+          grid-row: 2;
+        }
+
+        .dua3 {
+          grid-row: 3;
+        }
+
+        .dua4 {
+          grid-row: 4;
+        }
+
+        input[type="text"] {
+          width: 100%;
+        }
+
+        textarea[name="area"] {
+          display: grid;
+          width: 100%;
+          height: 55%;
+          justify-items: center;
+        }
+
+        button {
+          width: 100%;
+        }
+
+        .kontak {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(1, 400px);
+        }
+
+        .info {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(1, 1fr);
+          grid-column: unset;
+        }
+
+        .nomor,
+        .email,
+        .In {
+          display: grid;
+          grid-template-columns: unset;
+          justify-items: center;
+        }
+
+        .tiga {
+          width: 20px;
+          height: 20px;
+        }
+
+        .isiinfo {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg"></div>
+      <div class="transparan">
+        <div class="judul">
+          <h3>Halo, Selamat Datang Di Website Saya!</h3>
+        </div>
+      </div>
+
+      <div class="nav">
+        <img
+          class="logo"
+          src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-1024.png"
+          alt="Logo"
+        />
+        <ul>
+          <li class="abt">About Me</li>
+          <li class="pr">My Portofolio</li>
+          <li class="ct">Contact Me</li>
+        </ul>
+      </div>
+
+      <div class="konten">
+        <div class="isiawal">
+          <div class="dalem">
+            <img
+              class="satu"
+              src="https://img.icons8.com/?size=188&id=NDixIIZr9Mpc&format=png"
+            />
+            <p class="isi1">
+              Perkenalkan saya Titon, seorang Web developer yang berfokus dalam
+              membuat tampilan website yang modern dan responsive
+            </p>
+          </div>
+          <div class="dalem2">
+            <img
+              class="satu"
+              src="https://img.icons8.com/?size=188&id=DwgZLGKYRe0f&format=png"
+              alt="Logo"
+            />
+            <p class="isi1">
+              Saya telah mengikuti beberapa kelas khusus untuk membuat tampilan
+              web responsive dan telah mempunyai beberapa sertifikat
+            </p>
+          </div>
+          <div class="dalem3">
+            <img
+              class="satu"
+              src="https://img.icons8.com/?size=188&id=Bvw1MpqGTPxI&format=png"
+              alt="Logo"
+            />
+            <p class="isi1">
+              Saya telah mengusasi cara membuat tampilan website dengan
+              menggunakna HTML, CSS dan JavaScript saya juga dapat menggunakan
+              Framework modern seperti Bootstrap
+            </p>
+          </div>
+        </div>
+
+        <h2>My Portofolio</h2>
+        <div class="portofolio">
+          <img
+            class="dua1"
+            src="https://www.freepnglogos.com/uploads/javascript/logo-html-5-css-javascript-source-code-for-the-taking-23.png"
+            alt=""
+          />
+          <img
+            class="dua2"
+            src="https://logos-download.com/wp-content/uploads/2016/09/PHP_logo.png"
+            alt=""
+          />
+          <img
+            class="dua3"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5pX6nTNdMuIHdSByU2quZVEsc_K3uz-7-9p8p7uMgMg&s"
+            alt=""
+          />
+          <img
+            class="dua4"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs8Wtm0N-6LuGdFecO--6j_8mLddQDlNlmhB1u_IE4qA&s"
+            alt=""
+          />
+        </div>
+        <h2>Kontak Saya</h2>
+        <div class="kontak">
+          <div class="inputan">
+            <label for="">Nama</label><br />
+            <input type="text" /><br />
+            <label for="">Email</label><br />
+            <input type="text" /><br />
+            <label for="">Pesan</label><br />
+            <textarea name="area" id="" cols="59" rows="15"></textarea><br />
+            <button type="button">Kirim</button>
+          </div>
+
+          <div class="info">
+            <div class="nomor">
+              <img
+                class="tiga"
+                src="https://img.icons8.com/?size=200&id=letUS1DJO1ou&format=png"
+                alt=""
+              />
+              <p class="isiinfo">0878783734849234</p>
+            </div>
+            <div class="email">
+              <img
+                class="tiga"
+                src="https://img.icons8.com/?size=188&id=W2i9VMhMFvHm&format=png"
+                alt=""
+              />
+              <p class="isiinfo">ssssdsds@gmail.com</p>
+            </div>
+            <div class="In">
+              <img
+                class="tiga"
+                src="https://img.icons8.com/?size=188&id=MR3dZdlA53te&format=png"
+                alt=""
+              />
+              <p class="isiinfo">Titon Meisya Kresna</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">@Copyroght.2024.Titon Meisya Kresna</div>
+    </div>
+  </body>
+</html>
